@@ -1,25 +1,25 @@
-#Bookbub book genre test
+# Bookbub book genre test
 
 Author: Keith Olenchak <keith.olenchak@gmail.com>
 
-##Description
+## Description
 This application takes in two arguments a json file with an array of book objects containing at least a title and a description, and a csv with genre, keyword, points (a header is assumed so the first line is not evaluated). A genre score is calculated based on the total number of keywords it has show up in the description multiplied by the average point value of all unique keywords found for that genre. The results are then displayed to standard out.
 
-##Execution
+## Execution
 There are two options for executing this application. using node to execute the index.js file directly (requires node) or use one of the convienently packaged executables.
-###Node
+### Node
 1) Install the latest node LTS, tested with 8.9.0 and 8.11.0
 2) Clone repo
 3) `npm install`
 4) `node index.js -b <path to books json file> -g <path to genre keyword point csv>`
 
 Example: `node index.js --books Resources/sample_book.json -g Resources/sample_genre_keyword_value.csv`
-###Executables
+### Executables
 1) Clone repo
 2) Run executable for your environment
 Example: `./index-macos --books Resources/sample_book.json -g Resources/sample_genre_keyword_value.csv`
 
-##Remaining Tasks
+## Remaining Tasks
 - More granular error handling so any displayed errors would be displayed with more context
 - Condense some loops to improve efficiency
 - Revist data structures to see if they can be refactored to improve efficiency
